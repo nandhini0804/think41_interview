@@ -1,0 +1,34 @@
+User Sql:
+
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    email VARCHAR(150),
+    age INT,
+    gender CHAR(1),
+    state VARCHAR(100),
+    street_address VARCHAR(200),
+    postal_code VARCHAR(20),
+    city VARCHAR(100),
+    country VARCHAR(100),
+    latitude FLOAT,
+    longitude FLOAT,
+    traffic_source VARCHAR(50),
+    created_at DATETIME
+);
+
+
+orders sql 
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    user_id INT,
+    status VARCHAR(50),
+    gender CHAR(1),
+    created_at DATETIME,
+    returned_at DATETIME,
+    shipped_at DATETIME,
+    delivered_at DATETIME,
+    num_of_item INT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
