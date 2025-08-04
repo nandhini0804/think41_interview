@@ -2,7 +2,7 @@
 $host = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'your_database_name';
+$database = 'sample';
 
 // Connect to MySQL
 $conn = new mysqli($host, $username, $password, $database);
@@ -47,3 +47,4 @@ if ($ordersFile !== false) {
 echo "Data imported successfully.";
 $conn->close();
 ?>
+
